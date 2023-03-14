@@ -12,7 +12,7 @@ The designs were created to the following widths:
 ### Links
 
 - Solution URL: [https://github.com/eigdoyr/product-preview-card](https://github.com/eigdoyr/product-preview-card)
-- Live Site URL: [https://eigdoyr-product-preview-card.netlify.com](https://eigdoyr-product-preview-card.netlify.com)
+- Live Site URL: [https://eigdoyr-product-preview.netlify.com](https://eigdoyr-product-preview-card.netlify.com)
 
 ## Built with
 
