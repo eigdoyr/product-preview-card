@@ -1,27 +1,27 @@
 <template>
   <main>
-    <div class="container">
-      <div class="hero-img">
-        <img class="img-main" src="./assets/bleu-2.jpg" alt="perfume bottle" />
-      </div>
-      <div class="description">
-        <p class="subtitle">perfume</p>
-        <h1 class="title">Gabrielle Essence Eau De Parfum</h1>
-        <p class="leading">
-          A floral, solar and voluptuous interpretation composed by Olivier
-          Polge, Perfumer-Creator for the House of CHANEL.
+    <div class="card-container">
+      <img
+        class="card-img"
+        src="./assets/bleu-2.jpg"
+        alt="bleu de chanel perfume bottle"
+      />
+      <div class="card-description">
+        <p class="card-category">perfume</p>
+        <h1 class="card-title">Gabrielle Essence Eau De Parfum</h1>
+        <p class="card-lead-text">
+          A Woody Aromatic fragrance interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.
         </p>
-
-        <div class="price">
-          <h2 class="price-main">$149.99</h2>
-          <p class="price-orig">$169.99</p>
+        <div class="card-prices">
+          <span class="price-new">$149.99</span>
+          <span class="price-old" aria-hidden="true">$169.99</span>
         </div>
-
-        <a href="#" class="btn-add">
+        <button class="card-btn-add" type="button">
           <svg
-            class="btn-icon-add"
-            width="15"
-            height="16"
+            class="card-btn-icon"
+            width="16px"
+            height="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -30,7 +30,7 @@
             />
           </svg>
           Add to Cart
-        </a>
+        </button>
       </div>
     </div>
   </main>
@@ -38,123 +38,150 @@
 
 <style scoped>
 main {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
   background-color: var(--cream);
-  height: 100vh;
-}
-
-img {
-  width: 100%;
-}
-
-h1,
-h2 {
-  font-family: "Fraunces", serif;
 }
 
 p {
-  font-size: 0.9rem;
-  color: var(--dark-grayish-blue);
+  color: var(--cream);
 }
-
-.hero-img {
-  margin-bottom: -4px; /*removing extra space bet container div*/
+.card-container {
+  display: -ms-grid;
+  display: grid;
+  padding: 1rem;
+  max-width: 26.5625rem;
+  -webkit-box-shadow: 20px 31px 67px -17px rgba(92, 83, 92, 1);
+  box-shadow: 20px 31px 67px -17px rgba(92, 83, 92, 1);
+  border-radius: 0.6rem;
 }
-
-.img-main {
-  border-radius: 0.5rem 0.5rem 0 0;
-}
-
-.subtitle {
-  text-transform: uppercase;
-  letter-spacing: 0.25rem;
-  font-size: 0.75rem;
-  padding-bottom: 1rem;
-}
-
-.title {
-  padding-bottom: 0.75rem;
-  line-height: 2rem;
-}
-
-.container {
-  padding: 1.75rem 1rem;
-}
-
-.description {
-  background-color: var(--white);
-  padding: 1.5rem;
-  border-radius: 0 0 0.5rem 0.5rem;
-}
-
-.leading {
-  line-height: 1.25rem;
-  padding-bottom: 1rem;
-}
-
-.price {
-  display: flex;
-  padding-bottom: 1rem;
-}
-
-.btn-add {
-  background-color: var(--dark-cyan);
-  color: var(--white);
-  font-size: 0.85rem;
-  font-weight: 700;
-  border: none;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.5rem;
-  padding: 1.1rem;
+.card-img {
   width: 100%;
-  max-width: 295px;
+  height: 15.375rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  border-radius: 0.6rem 0.6rem 0 0;
 }
 
-.btn-icon-add {
-  position: relative;
-  margin-right: 0.5rem;
+.card-description {
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+  padding: 1.5rem;
+  border-radius: 0 0 0.6rem 0.6rem;
 }
 
-.price-orig {
-  text-decoration: line-through;
-  align-self: center;
+.card-category {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5rem;
+  margin-left: 0.15rem;
+  padding-bottom: 1rem;
 }
 
-.price-main {
+.card-title {
+  font-family: "Fraunces", serif;
+  line-height: 2.25rem;
+}
+
+.card-lead-text {
+  font-size: 0.85rem;
+  padding: 0.75rem 0;
+}
+
+.card-prices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.75rem 0;
+}
+
+.price-new {
+  font-family: "Fraunces", serif;
   font-size: 2rem;
-  font-weight: 700;
-  color: var(--dark-cyan);
-  padding-right: 1rem;
-  justify-items: ;
+  color: var(--purple);
 }
 
-@media (width >= 768px) {
-  main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.price-old {
+  text-decoration: line-through;
+  font-size: 0.85rem;
+}
+
+button {
+  all: unset;
+}
+
+.card-btn-add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.65rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 3rem;
+  background-color: var(--pale-blue);
+  -webkit-transition: ease-out 0.3s;
+  -o-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+
+.card-btn-add:hover {
+  cursor: pointer;
+  background-color: var(--purple);
+}
+
+@media (width>=48rem) {
+  .card-container {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    max-width: 37.5rem;
+    padding: 0;
   }
 
-  .container {
-    display: flex;
+  .card-img {
+    height: 100%;
+    border-radius: 0.6rem 0 0 0.6rem;
   }
 
-  .description {
-    max-width: 280px;
-    max-height: 384px;
-    border-radius: 0 0.5rem 0.5rem 0;
+  .card-category {
+    padding-bottom: 0.65rem;
   }
 
-  .img-main {
-    content: url("./assets/bleu-2.jpg");
-    max-height: 620px;
-    max-width: 256px; /* You must set a specified height */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover;
-    border-radius: 0.5rem 0 0 0.5rem;
+  .card-description {
+    padding: 2.2rem;
+    border-radius: 0 0.6rem 0.6rem 0;
+  }
+
+  .card-title {
+    padding: 0.4rem 0;
+    font-size: 1.9rem;
+    line-height: 2.1rem;
+  }
+
+  .card-lead-text {
+    line-height: 1.5rem;
+  }
+
+  .card-prices {
+    padding: 0 0 1.5rem;
+  }
+
+  .card-btn-add {
+    height: 2.8rem;
+    font-size: 0.85rem;
   }
 }
 </style>
