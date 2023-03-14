@@ -53,8 +53,6 @@ p {
   display: grid;
   padding: 1rem;
   max-width: 26.5625rem;
-  -webkit-box-shadow: 20px 31px 67px -17px rgba(92, 83, 92, 1);
-  box-shadow: 20px 31px 67px -17px rgba(92, 83, 92, 1);
   border-radius: 0.6rem;
 }
 .card-img {
@@ -149,6 +147,8 @@ button {
     grid-template-columns: 1fr 1fr;
     max-width: 37.5rem;
     padding: 0;
+    -webkit-box-shadow: 20px 31px 67px -17px rgba(92, 83, 92, 1);
+    box-shadow: 20px 31px 67px -17px rgba(92, 83, 92, 1);
   }
 
   .card-img {
