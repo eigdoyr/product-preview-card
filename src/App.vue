@@ -42,7 +42,7 @@ main {
   display: grid;
   place-content: center;
   min-height: 100vh;
-  background-color: var(--cream);
+  background-color: var(--pale-purple);
 }
 
 p {
